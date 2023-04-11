@@ -28,16 +28,18 @@ function showBars() {
     );
   }
 
-  //   let barHeight = document.querySelector("#bar").style.height = `${numberList[0]}%`;
+    // let barHeight = document.querySelector("#bar").style.height = `${numberList[0]}%`;
   //    "10%"
 
   heightOnBars();
 }
 
 function heightOnBars() {
+   let bars = document.querySelectorAll("#bar");
   for (let i = 0; i < 40; i++) {
-    document.querySelectorAll("#bar").style.height = `${numberList}%`;
+    bars[i].style.height = `${numberList[i]}px`;
   }
+  
 }
 
 // function customers() {
