@@ -7,4 +7,5 @@
 #bars {
   grid-template-columns: repeat(40, 1fr);
   display: grid;
+  align-items: end;
 }
