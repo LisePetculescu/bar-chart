@@ -5,7 +5,6 @@
 }
 
 #bars {
-    grid-template-columns: repeat(40, 1fr);
+  grid-template-columns: repeat(40, 1fr);
   display: grid;
-  grid-auto-flow: reverse;
 }
