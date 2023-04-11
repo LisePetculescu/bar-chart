@@ -6,6 +6,6 @@
 
 #bars {
     grid-template-columns: repeat(40, 1fr);
-  display: flex;
-  flex-flow: wrap-reverse;
+  display: grid;
+  grid-auto-flow: reverse;
 }

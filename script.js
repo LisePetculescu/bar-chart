@@ -8,15 +8,14 @@ const numberList = [
 ];
 
 function start() {
-  setInterval(getNumberOfCustomers, 1000);
   showBars();
-  //   customers();
+  setInterval(getNumberOfCustomers, 1000);
 }
 
 function getNumberOfCustomers() {
   let number = Math.floor(Math.random() * 32);
-  //   console.log(number);
-  return number;
+  console.log(number);
+  newCustomers(number);
 }
 
 function showBars() {
@@ -27,26 +26,19 @@ function showBars() {
     <div id="bar"></div>`
     );
   }
-
-    // let barHeight = document.querySelector("#bar").style.height = `${numberList[0]}%`;
-  //    "10%"
-
   heightOnBars();
 }
 
 function heightOnBars() {
-   let bars = document.querySelectorAll("#bar");
+  let bars = document.querySelectorAll("#bar");
   for (let i = 0; i < 40; i++) {
     bars[i].style.height = `${numberList[i]}px`;
   }
-  
 }
 
-// function customers() {
-//   for (let i = 0; i < 40; i++) {
-//     let number = Math.floor(Math.random() * 32);
-//     // console.log('værdi#${i} er ${myArr[i]}');
-//     numberList.push(number);
-//     console.log(numberList);
-//   }
-// }
+function newCustomers(number) {
+  numberList.push(number);
+  numberList.shift();
+
+  numberList.forEach(heightOnBars);
+}
